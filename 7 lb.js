@@ -1,0 +1,48 @@
+// Завдання 1
+
+function sumSalaries(salaries) {
+    let sum = 0;
+
+    for (let value of Object.values(salaries)) {
+        sum += value;
+    }
+
+    return sum;
+}
+
+let salaries = {
+    "Іван": 100,
+    "Петро": 300,
+    "Марія": 250
+};
+
+console.log(sumSalaries(salaries));
+
+
+
+// Завдання 2
+
+function count(obj) {
+    return Object.keys(obj).length;
+}
+
+let user = {
+    name: "Іван",
+    age: 30
+};
+
+console.log(count(user));
+
+
+// Завдання 3
+
+let user = {
+    name: "Іван",
+    years: 30
+};
+
+let { name, years: age, isAdmin = false } = user;
+
+console.log(name);
+console.log(age);
+console.log(isAdmin);
